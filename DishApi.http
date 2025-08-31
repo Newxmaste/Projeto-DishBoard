@@ -1,0 +1,34 @@
+@DishApi_HostAddress = http://localhost:5152
+
+GET {{DishApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+
+###
+
+GET {{DishApi_HostAddress}}/api/Users/GetUsers/
+Accept: application/json
+
+###
+
+POST {{DishApi_HostAddress}}/api/Users/AddUser/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "teste@teste.com",
+  "password": "123456",
+  "username": "testeUser",
+  "phoneNumber": "912345678",
+  "profileImage": "https://site.com/imagem.png"
+}
+
+###
+
+PUT {{DishApi_HostAddress}}/api/Users/8d70727e-2780-49ab-a00b-1512663d0fea
+Content-Type: application/json
+
+{
+    "NewEmail": "novoemail@exemplo.com",
+    "NewUserPassword": "novaSenha123"
+}
