@@ -11,24 +11,45 @@ Accept: application/json
 
 ###
 
+GET {{DishApi_HostAddress}}/api/Restaurants/GetAllRestaurants/
+Accept: application/json
+
+###
+
 POST {{DishApi_HostAddress}}/api/Users/AddUser/
 Content-Type: application/json
 Accept: application/json
 
 {
-  "email": "teste@teste.com",
+  "email": "newxmaste@teste.com",
   "password": "123456",
-  "username": "testeUser",
+  "username": "testeUser1",
   "phoneNumber": "912345678",
   "profileImage": "https://site.com/imagem.png"
 }
 
 ###
 
-PUT {{DishApi_HostAddress}}/api/Users/8d70727e-2780-49ab-a00b-1512663d0fea
+POST {{DishApi_HostAddress}}/api/Restaurants/8d70727e-2780-49ab-a00b-1512663d0fea
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "restaurante",
+  "address": "00000000000",
+  "phoneNumber": "string"
+}
+
+###
+
+PUT {{DishApi_HostAddress}}/api/Users/aac8603a-5c31-4ace-b6b5-05767d5fb9c7
 Content-Type: application/json
 
 {
-    "NewEmail": "novoemail@exemplo.com",
-    "NewUserPassword": "novaSenha123"
+    "role": "Server"
 }
+
+###
+
+DELETE {{DishApi_HostAddress}}/api/Restaurants/f2cedbd4-a3aa-4d49-955c-51140b1f65eb
+Content-Type: application/json

@@ -43,9 +43,12 @@ public class RestaurantService : IRestaurantService
             PhoneNumber = dto.PhoneNumber,
             CreatedByUserId = currentUser.Id
         };
+        currentUser.Role = "Manager";
+
 
         dbContext.Restaurants.Add(newRestaurant);
         dbContext.SaveChanges();
+
 
         return newRestaurant;
     }
@@ -57,6 +60,11 @@ public class RestaurantService : IRestaurantService
         if (restaurant is null) return false;
 
         dbContext.Restaurants.Remove(restaurant);
+
+        var user = userService.GetUserById(restaurant.CreatedByUserId);
+        if (user is null) return false;
+        user.Role = "Uncategorized";
+
         dbContext.SaveChanges();
 
         return true;

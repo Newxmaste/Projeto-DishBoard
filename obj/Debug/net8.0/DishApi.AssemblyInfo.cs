@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DishApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+563f8c6671d738a93e0c3b167a521d0b169c9320")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d26e68612759c3f5662b35e9eb172d0df7c6831")]
 [assembly: System.Reflection.AssemblyProductAttribute("DishApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DishApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

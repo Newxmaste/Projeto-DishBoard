@@ -1,6 +1,7 @@
 using DishApi.Data;
 using DishApi.Dto;
 using DishApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 public class UserService : IUserService
 {
@@ -13,7 +14,9 @@ public class UserService : IUserService
 
     public List<User> GetAllUsers()
     {
-        return dbcontext.Users.ToList();
+        var users = dbcontext.Users.Include(u => u.Restaurants).ToList();
+
+        return users;
     }
 
     public User? GetUserById(Guid id)
@@ -70,6 +73,7 @@ public class UserService : IUserService
         {
             user.ProfileImage = dto.NewProfileImage;
         }
+
         dbcontext.SaveChanges();
 
         return user;
